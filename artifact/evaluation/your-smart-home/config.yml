@@ -1,0 +1,39 @@
+general:
+    method-name: "YourSmartHome"
+    input-type: "mixed"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "TrainData"
+        path: "<path-to-the-train-dataset"
+        type: "per_device"
+        load: no # yes = Load the list of pcap files, no = the method will take directory as input
+      - name: "TestData"
+        path: "<path-to-the-test-dataset"
+        type: "per_device"
+        load: no # yes = Load the list of pcap files, no = the method will take directory as input
+
+data-preprocessing:
+    required-data-format: raw # [json, csv] (options)
+    use-known-devices: no # IF you want to only test on devices available in the training data
+    train-dataset: "TrainData"  # can be different from train_data
+    test-dataset: "TestData"
+    threshold: 0.7
+
+model-training:
+    class-name: "YourSmartHomeTraining"
+    class-path: "framework/eval_modules/your_smart_home_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    bidirectional: yes 
+    paths:
+      repo: "<path-to-the-code-repository>"
+      eval-dir: "./evaluation/your-smart-home"
+      model-dir: "./evaluation/your-smart-home/models" # Path to where the models are stored.
+      device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
+
+model-testing:
+    class-name: "YourSmartHomeTesting"
+    class-path: "framework/eval_modules/your_smart_home_testing.py"
+    report-dir: "./evaluation/your-smart-home/reports/"

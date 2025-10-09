@@ -1,0 +1,34 @@
+general:
+    method-name: "IoTSentinel"
+    input-type: "per_device"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-2_dynamic"
+        path: "dataset/Exp-2_dynamic_per_device"
+        type: "per_device"
+        load: no
+
+data-preprocessing:
+    required-data-format: raw
+    use-known-devices: yes 
+    train-dataset: "Exp-2_dynamic"
+    test-dataset: "Exp-2_dynamic"
+    threshold: 0.1
+
+model-training:
+    class-name: "IoTSentinelTraining"
+    class-path: "framework/eval_modules/iot_sentinel_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    cmds: ""
+    paths:
+      repo: "../reimplementations/IoT-Sentinel-device-identification"
+      eval-dir: "./evaluation/iot-sentinel"
+      model-dir: "./evaluation/iot-sentinel/{}-models" # Path to where the models are stored.
+
+model-testing:
+    class-name: "IoTSentinelTesting"
+    class-path: "framework/eval_modules/iot_sentinel_testing.py"
+    report-dir: "./evaluation/iot-sentinel/reports/"

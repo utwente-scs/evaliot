@@ -1,0 +1,8 @@
+setuptools==75.2.0
+wheel==0.44.0
+numpy==2.1.2
+PyYAML==6.0.1
+scapy==2.5.0
+scikit_learn==1.5
+regex==2023.10.3
+pandas==2.3.2

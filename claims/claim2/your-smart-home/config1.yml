@@ -1,0 +1,35 @@
+general:
+    method-name: "YourSmartHome"
+    input-type: "mixed"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-2_static"
+        path: "dataset/Exp-2_static"
+        type: "mixed"
+        load: no
+
+data-preprocessing:
+    required-data-format: raw
+    use-known-devices: yes
+    train-dataset: "Exp-2_static"
+    test-dataset: "Exp-2_static"
+    threshold: 0.1
+
+model-training:
+    class-name: "YourSmartHomeTraining"
+    class-path: "framework/eval_modules/your_smart_home_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    bidirectional: yes 
+    paths:
+      repo: "../reimplementations/your-smart-home-can-t-keep-a-secret"
+      eval-dir: "./evaluation/your-smart-home"
+      model-dir: "./evaluation/your-smart-home/models" # Path to where the models are stored.
+      device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
+
+model-testing:
+    class-name: "YourSmartHomeTesting"
+    class-path: "framework/eval_modules/your_smart_home_testing.py"
+    report-dir: "./evaluation/your-smart-home/reports/"

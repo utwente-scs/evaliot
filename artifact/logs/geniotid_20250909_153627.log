@@ -1,0 +1,90 @@
+2025-09-09 15:36:27,122 - framework.data_ingestion - DEBUG - [Data Ingestion] : Dataset Exp-1_iot loaded.
+2025-09-09 15:36:27,122 - root - DEBUG - [Data Ingestion] : Datasets Ingested: 1
+2025-09-09 15:36:27,122 - root - DEBUG - [Data Prepocessing] : Training data loaded with devices: ['smartplug-kp105', 'ilife_t10s', 'chromecast_v3', 'nest_smokealarm', 'calex_slimme_led_vloerlamp', 'echo_dot', 'smartplug-hs110', 'calex_motion_sensor', 'bosch_dishwasher', 'ring_doorbell', 'welltobe_pet_feeder', 'samsung_fridge', 'pni_safe_house_pg600lr', 'salcar_radiatorthermostaat_trv801w', 'philips_tv', 'princess_smart_aerofryer', 'google_nest_cam', 'philips_luchtreiniger_600-serie', 'google_home_mini', 'philips_hue', 'watersensor', 'amazon_echo'], Testing data loaded with devices: ['smartplug-kp105', 'ilife_t10s', 'chromecast_v3', 'nest_smokealarm', 'calex_slimme_led_vloerlamp', 'echo_dot', 'smartplug-hs110', 'calex_motion_sensor', 'bosch_dishwasher', 'ring_doorbell', 'welltobe_pet_feeder', 'samsung_fridge', 'pni_safe_house_pg600lr', 'salcar_radiatorthermostaat_trv801w', 'philips_tv', 'princess_smart_aerofryer', 'google_nest_cam', 'philips_luchtreiniger_600-serie', 'google_home_mini', 'philips_hue', 'watersensor', 'amazon_echo']
+2025-09-09 15:36:28,137 - root - DEBUG - Generated Model Training Class:GenIoTIDTraining
+2025-09-09 15:36:28,137 - root - DEBUG - <class 'GenIoTIDTraining.GenIoTIDTraining'>
+2025-09-09 15:36:28,137 - root - DEBUG - Generated Model Test Class: GenIoTIDTesting
+2025-09-09 15:36:28,137 - root - DEBUG - <class 'GenIoTIDTesting.GenIoTIDTesting'>
+2025-09-09 15:36:28,137 - root - DEBUG - Training Dataset: Exp-1_iot
+2025-09-09 15:36:28,138 - root - DEBUG - Testing Dataset: Exp-1_iot
+2025-09-09 15:36:28,138 - root - DEBUG - Cross Validation: True
+2025-09-09 15:36:28,248 - framework.model_training - DEBUG - [GenIoTID training] : Imported GenIoTID code from the repo
+2025-09-09 15:36:28,249 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: smartplug-kp105
+2025-09-09 15:36:28,256 - filelock - DEBUG - Attempting to acquire lock 138198595381312 on /home/chakshu/.cache/python-tldextract/3.12.3.final__venv__ae1cab__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-09-09 15:36:28,257 - filelock - DEBUG - Lock 138198595381312 acquired on /home/chakshu/.cache/python-tldextract/3.12.3.final__venv__ae1cab__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-09-09 15:36:28,259 - filelock - DEBUG - Attempting to release lock 138198595381312 on /home/chakshu/.cache/python-tldextract/3.12.3.final__venv__ae1cab__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-09-09 15:36:28,259 - filelock - DEBUG - Lock 138198595381312 released on /home/chakshu/.cache/python-tldextract/3.12.3.final__venv__ae1cab__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-09-09 15:36:29,647 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:36:29,663 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: ilife_t10s
+2025-09-09 15:37:07,828 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:37:08,182 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: chromecast_v3
+2025-09-09 15:38:38,977 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:38:39,646 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: nest_smokealarm
+2025-09-09 15:38:39,877 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:38:39,880 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: calex_slimme_led_vloerlamp
+2025-09-09 15:38:54,070 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:38:54,187 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: echo_dot
+2025-09-09 15:39:09,682 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:09,826 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: smartplug-hs110
+2025-09-09 15:39:11,323 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:11,341 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: calex_motion_sensor
+2025-09-09 15:39:11,992 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:12,011 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: bosch_dishwasher
+2025-09-09 15:39:17,769 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:17,823 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: ring_doorbell
+2025-09-09 15:39:39,732 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:40,199 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: welltobe_pet_feeder
+2025-09-09 15:39:52,372 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:39:52,487 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: samsung_fridge
+2025-09-09 15:42:00,699 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:42:03,578 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: pni_safe_house_pg600lr
+2025-09-09 15:42:17,837 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:42:18,557 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: salcar_radiatorthermostaat_trv801w
+2025-09-09 15:42:24,357 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:42:24,415 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: philips_tv
+2025-09-09 15:44:48,185 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:44:49,364 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: princess_smart_aerofryer
+2025-09-09 15:45:47,656 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:45:48,276 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: google_nest_cam
+2025-09-09 15:49:12,240 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:49:15,908 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: philips_luchtreiniger_600-serie
+2025-09-09 15:49:19,713 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:49:19,752 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: google_home_mini
+2025-09-09 15:50:34,710 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:50:35,965 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: philips_hue
+2025-09-09 15:50:56,697 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:50:56,982 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: watersensor
+2025-09-09 15:50:57,172 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:50:57,175 - framework.model_training - DEBUG - [GenIoTID training] : Extracting packets from the files for device: amazon_echo
+2025-09-09 15:51:27,523 - framework.model_training - DEBUG - [GenIoTID training] : Extracting features from the traffic flows
+2025-09-09 15:51:28,141 - framework.model_training - DEBUG - [GenIoTID training] : Saving the extracted features into pickle files.
+2025-09-09 15:51:28,142 - framework.model_training - DEBUG - [GenIoTID training] : Loaded the training dataset
+2025-09-09 15:51:28,191 - root - DEBUG - Model Train Class Initialized! Running the command to train the model...
+2025-09-09 15:51:28,307 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 0
+2025-09-09 15:51:28,725 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 1
+2025-09-09 15:51:28,725 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_0.sav
+2025-09-09 15:51:28,725 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 1
+2025-09-09 15:51:29,152 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 2
+2025-09-09 15:51:29,152 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_1.sav
+2025-09-09 15:51:29,152 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 2
+2025-09-09 15:51:29,625 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 3
+2025-09-09 15:51:29,626 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_2.sav
+2025-09-09 15:51:29,626 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 3
+2025-09-09 15:51:30,146 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 4
+2025-09-09 15:51:30,147 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_3.sav
+2025-09-09 15:51:30,147 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 4
+2025-09-09 15:51:30,674 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 5
+2025-09-09 15:51:30,674 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_4.sav
+2025-09-09 15:51:30,674 - root - DEBUG - [Model Training]: Result: None
+2025-09-09 15:51:30,674 - root - DEBUG - [Model Testing] : No processing or loading required for the test data
+2025-09-09 15:51:30,674 - framework.model_testing - DEBUG - [GenIoTID testing] : Imported GenIoTID code from the repo
+2025-09-09 15:51:30,674 - root - DEBUG - [Model Testing] : Model Test Class Initialized! Running the command to test the model...
+2025-09-09 15:51:30,674 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 0 of cross validation testing.
+2025-09-09 15:51:30,714 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 1 of cross validation testing.
+2025-09-09 15:51:30,753 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 2 of cross validation testing.
+2025-09-09 15:51:30,789 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 3 of cross validation testing.
+2025-09-09 15:51:30,823 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 4 of cross validation testing.
+2025-09-09 15:51:30,857 - framework.model_testing - DEBUG - [GenIoTID testing] : Testing complete with cross validation
+2025-09-09 15:51:30,857 - framework.model_testing - DEBUG - [Model Testing] : Generating the result of the model testing of the method: geniotid
+2025-09-09 15:51:30,857 - framework.model_testing - DEBUG - [Model Testing] : The model has enabled cross-validation.
+2025-09-09 15:51:30,913 - root - DEBUG - [Model Testing] : Result report generated at path: ./evaluation/ndss_method/reports/geniotid_Exp-1_iot_0.json

@@ -1,0 +1,35 @@
+general:
+    method-name: "geniotid"
+    input-type: "per_device"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-1_iot"
+        path: "dataset/Exp-1_iot_per_device"
+        type: "per_device"
+        load: no
+
+data-preprocessing:
+    required-data-format: raw 
+    use-known-devices: yes 
+    train-dataset: "Exp-1_iot"
+    test-dataset: "Exp-1_iot"
+    threshold: 0.1
+
+model-training:
+    class-name: "GenIoTIDTraining"
+    class-path: "framework/eval_modules/geniotid_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    cmds: ""
+    paths:
+      repo: "../reimplementations/geniotid"
+      eval-dir: "./evaluation/geniotid"
+      model-dir: "./evaluation/geniotid/{}-models" # Path to where the models are stored.
+      device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
+
+model-testing:
+    class-name: "GenIoTIDTesting"
+    class-path: "framework/eval_modules/geniotid_testing.py"
+    report-dir: "./evaluation/geniotid/reports/"

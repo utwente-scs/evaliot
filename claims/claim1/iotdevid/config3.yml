@@ -1,0 +1,37 @@
+general:
+    method-name: "iotdevid"
+    input-type: "per_device"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-1_iot"
+        path: "dataset/Exp-1_iot_per_device"
+        type: "per_device"
+        load: no
+      - name: "Exp-1_iot_mobile_it"
+        path: "dataset/Exp-1_iot_mobile_it_per_device"
+        type: "per_device"
+        load: no
+
+data-preprocessing:
+    required-data-format: raw
+    use-known-devices: yes
+    train-dataset: "Exp-1_iot"
+    test-dataset: "Exp-1_iot_mobile_it"
+    threshold: 0.1
+
+model-training:
+    class-name: "IoTDevIDTraining"
+    class-path: "framework/eval_modules/iotdevid_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    paths:
+      repo: "../reimplementations/iotdevidv2"
+      eval-dir: "./evaluation/iotdevid"
+      model-dir: "./evaluation/iotdevid/models/{}" # Path to where the models are stored.
+      device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
+
+model-testing:
+    class-name: "IoTDevIDTesting"
+    class-path: "framework/eval_modules/iotdevid_testing.py"
+    report-dir: "./evaluation/iotdevid/reports/"

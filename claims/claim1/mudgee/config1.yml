@@ -1,0 +1,43 @@
+general:
+    method-name: "MUDgee"
+    input-type: "per_device"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-1_iot"
+        path: "dataset/Exp-1_iot_per_device"
+        type: "per_device"
+        load: no
+
+data-preprocessing:
+    required-data-format: raw
+    use-known-devices: yes 
+    train-dataset: "Exp-1_iot"
+    test-dataset: "Exp-1_iot"
+    threshold:
+      - 0.8 # Dynamic similarity score
+      - 0.7 # Static similarity score
+
+model-training:
+    class-name: "MudgeeTraining"
+    class-path: "framework/eval_modules/mudgee_training.py"  # Relative path to the class file
+    train-model: no # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    cmds:
+      # Format it with device directory and result file name
+      merge: "sh ./merge-pcaps.sh {} {}"
+      # Format it with dataset-name, iteration-number and file-dict ({device:"file-path"})
+      update: "python update-config.py . {} '{}' {}" 
+      # Format it with dataset-name
+      train: "sh ./run-mudgee.sh . {}" # IoT-Sentinel 
+    paths:
+      repo: "../reimplementations/runtime-identification-mudgee"
+      eval-dir: "./evaluation/mudgee"
+      model-dir: "./evaluation/mudgee/{}_result" # Path to where the models are stored.
+
+model-testing:
+    class-name: "MudgeeTesting"
+    class-path: "framework/eval_modules/mudgee_testing.py"
+    report-dir: "./evaluation/mudgee/reports/"
+    default-gateway-ip: "192.168.12.1"

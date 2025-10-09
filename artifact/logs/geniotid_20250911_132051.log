@@ -1,0 +1,41 @@
+2025-09-11 13:20:51,850 - framework.data_ingestion - DEBUG - [Data Ingestion] : Dataset Exp-1_iot loaded.
+2025-09-11 13:20:51,850 - root - DEBUG - [Data Ingestion] : Datasets Ingested: 1
+2025-09-11 13:20:51,851 - root - DEBUG - [Data Prepocessing] : Training data loaded with devices: ['smartplug-kp105', 'ilife_t10s', 'chromecast_v3', 'nest_smokealarm', 'calex_slimme_led_vloerlamp', 'echo_dot', 'smartplug-hs110', 'calex_motion_sensor', 'bosch_dishwasher', 'ring_doorbell', 'welltobe_pet_feeder', 'samsung_fridge', 'pni_safe_house_pg600lr', 'salcar_radiatorthermostaat_trv801w', 'philips_tv', 'princess_smart_aerofryer', 'google_nest_cam', 'philips_luchtreiniger_600-serie', 'google_home_mini', 'philips_hue', 'watersensor', 'amazon_echo'], Testing data loaded with devices: ['smartplug-kp105', 'ilife_t10s', 'chromecast_v3', 'nest_smokealarm', 'calex_slimme_led_vloerlamp', 'echo_dot', 'smartplug-hs110', 'calex_motion_sensor', 'bosch_dishwasher', 'ring_doorbell', 'welltobe_pet_feeder', 'samsung_fridge', 'pni_safe_house_pg600lr', 'salcar_radiatorthermostaat_trv801w', 'philips_tv', 'princess_smart_aerofryer', 'google_nest_cam', 'philips_luchtreiniger_600-serie', 'google_home_mini', 'philips_hue', 'watersensor', 'amazon_echo']
+2025-09-11 13:20:52,727 - root - DEBUG - Generated Model Training Class:GenIoTIDTraining
+2025-09-11 13:20:52,727 - root - DEBUG - <class 'GenIoTIDTraining.GenIoTIDTraining'>
+2025-09-11 13:20:52,727 - root - DEBUG - Generated Model Test Class: GenIoTIDTesting
+2025-09-11 13:20:52,728 - root - DEBUG - <class 'GenIoTIDTesting.GenIoTIDTesting'>
+2025-09-11 13:20:52,728 - root - DEBUG - Training Dataset: Exp-1_iot
+2025-09-11 13:20:52,728 - root - DEBUG - Testing Dataset: Exp-1_iot
+2025-09-11 13:20:52,728 - root - DEBUG - Cross Validation: True
+2025-09-11 13:20:52,799 - framework.model_training - DEBUG - [GenIoTID training] : Imported GenIoTID code from the repo
+2025-09-11 13:20:52,801 - framework.model_training - DEBUG - [GenIoTID training] : Loaded the training dataset
+2025-09-11 13:20:52,801 - root - DEBUG - Model Train Class Initialized! Running the command to train the model...
+2025-09-11 13:20:52,902 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 0
+2025-09-11 13:20:53,432 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 1
+2025-09-11 13:20:53,432 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_0.sav
+2025-09-11 13:20:53,433 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 1
+2025-09-11 13:20:53,921 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 2
+2025-09-11 13:20:53,921 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_1.sav
+2025-09-11 13:20:53,921 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 2
+2025-09-11 13:20:54,442 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 3
+2025-09-11 13:20:54,442 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_2.sav
+2025-09-11 13:20:54,443 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 3
+2025-09-11 13:20:54,982 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 4
+2025-09-11 13:20:54,982 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_3.sav
+2025-09-11 13:20:54,982 - framework.model_training - INFO - [GenIoTID training] : Starting Fold number: 4
+2025-09-11 13:20:55,476 - framework.model_training - INFO - [GenIoTID training] : Finished training the model for the fold number: 5
+2025-09-11 13:20:55,477 - framework.model_training - INFO - [GenIoTID training] : Model is saved in the location: ./evaluation/geniotid/Exp-1_iot-models/Exp-1_iot/Exp-1_iot_4.sav
+2025-09-11 13:20:55,477 - root - DEBUG - [Model Training]: Result: None
+2025-09-11 13:20:55,477 - root - DEBUG - [Model Testing] : No processing or loading required for the test data
+2025-09-11 13:20:55,477 - framework.model_testing - DEBUG - [GenIoTID testing] : Imported GenIoTID code from the repo
+2025-09-11 13:20:55,477 - root - DEBUG - [Model Testing] : Model Test Class Initialized! Running the command to test the model...
+2025-09-11 13:20:55,477 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 0 of cross validation testing.
+2025-09-11 13:20:55,514 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 1 of cross validation testing.
+2025-09-11 13:20:55,551 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 2 of cross validation testing.
+2025-09-11 13:20:55,587 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 3 of cross validation testing.
+2025-09-11 13:20:55,627 - framework.model_testing - DEBUG - [GenIoTID testing] : Starting fold number 4 of cross validation testing.
+2025-09-11 13:20:55,662 - framework.model_testing - DEBUG - [GenIoTID testing] : Testing complete with cross validation
+2025-09-11 13:20:55,662 - framework.model_testing - DEBUG - [Model Testing] : Generating the result of the model testing of the method: geniotid
+2025-09-11 13:20:55,662 - framework.model_testing - DEBUG - [Model Testing] : The model has enabled cross-validation.
+2025-09-11 13:20:55,723 - root - DEBUG - [Model Testing] : Result report generated at path: ./evaluation/geniotid/reports/geniotid_Exp-1_iot_1.json

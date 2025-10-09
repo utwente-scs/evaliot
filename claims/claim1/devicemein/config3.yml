@@ -1,0 +1,39 @@
+general:
+    method-name: "devicemein"
+    input-type: "mixed"
+    log-dir: "./logs"
+
+data-ingestion:
+    list-datasets:
+      - name: "Exp-1_iot"
+        path: "dataset/Exp-1_iot"
+        type: "mixed"
+        load: no # yes = Load the list of pcap files, no = the method will take directory as input
+      - name: "Exp-1_iot_mobile_it"
+        path: "dataset/Exp-1_iot_mobile_it"
+        type: "mixed"
+        load: no # yes = Load the list of pcap files, no = the method will take directory as input
+
+data-preprocessing:
+    required-data-format: raw # [json, csv] (options)
+    use-known-devices: yes # IF you want to only test on devices available in the training data
+    train-dataset: "Exp-1_iot"  # can be different from train_data
+    test-dataset: "Exp-1_iot_mobile_it"
+    threshold: 0.1
+
+model-training:
+    class-name: "DevicemeinTraining"
+    class-path: "framework/eval_modules/devicemein_training.py"  # Relative path to the class file
+    train-model: yes # Run the training or use already trained models
+    # If the method needs a shell script to run the training. Empty if not.
+    cmds: ""
+    paths:
+      repo: "../reimplementations/devicemein"
+      eval-dir: "./evaluation/devicemein"
+      model-dir: "./evaluation/devicemein/{}-models" # Path to where the models are stored.
+      device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
+
+model-testing:
+    class-name: "DevicemeinTesting"
+    class-path: "framework/eval_modules/devicemein_testing.py"
+    report-dir: "./evaluation/devicemein/reports/"
