@@ -3,7 +3,7 @@
 ## Dataset Setup and Evaluation Method
 
 ### 1. Download datasets  
-Download the following files from [here](https://drive.google.com/drive/folders/1s6kpXD9fSfkK6dnhyxvWnkOOyjOqqbdZ?usp=drive_link){:target="_blank"}:  
+Download the following files from [here](https://drive.google.com/drive/folders/1s6kpXD9fSfkK6dnhyxvWnkOOyjOqqbdZ?usp=drive_link):  
 - `Experiment-1.zip`  
 - `Experiment-2.zip`  
 
@@ -57,7 +57,15 @@ mkdir reimplementations
 git clone <repo-link> <local-path>
 ```
 
-## Run the Experiments
+## Run Batch Experiments
+
+- Run the script `run_claim.sh` using the claim number (1, 2, 3, 4) as an argument. The script will automatically run all options for all methods. This process may take some time, so please be patient.
+
+```bash
+./run_claim.sh <claim-number>
+```
+
+## Run Individual Experiments
 
 ### Experiment 1 : IoT vs non-IoT devices
 
