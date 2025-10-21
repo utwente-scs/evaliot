@@ -5,20 +5,20 @@ general:
 
 data-ingestion:
     list-datasets:
-      - name: "Exp-1_iot_mobile"
-        path: "dataset/Exp-1_iot_mobile"
+      - name: "Exp-2_static"
+        path: "dataset/Exp-2_static"
         type: "mixed"
-        load: no # yes = Load the list of pcap files, no = the method will take directory as input
-      - name: "Exp-1_iot_mobile_it"
-        path: "dataset/Exp-1_iot_mobile_it"
+        load: no 
+      - name: "Exp-2_dynamic"
+        path: "dataset/Exp-2_dynamic"
         type: "mixed"
-        load: no # yes = Load the list of pcap files, no = the method will take directory as input
+        load: no
 
 data-preprocessing:
-    required-data-format: raw # [json, csv] (options)
-    use-known-devices: yes # IF you want to only test on devices available in the training data
-    train-dataset: "Exp-1_iot_mobile"  # can be different from train_data
-    test-dataset: "Exp-1_iot_mobile_it"
+    required-data-format: raw
+    use-known-devices: no
+    train-dataset: "Exp-2_static" 
+    test-dataset: "Exp-2_dynamic"
     threshold: 0.1
 
 model-training:
@@ -28,7 +28,7 @@ model-training:
     # If the method needs a shell script to run the training. Empty if not.
     cmds: ""
     paths:
-      repo: "../reimplementations/devicemein"
+      repo: "../reimplementations/devicemien"
       eval-dir: "./evaluation/devicemein"
       model-dir: "./evaluation/devicemein/{}-models" # Path to where the models are stored.
       device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)

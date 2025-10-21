@@ -6,8 +6,8 @@ general:
 data-ingestion:
     list-datasets:
       - name: "Exp-2_dynamic"
-        path: "dataset/Exp-2_dynamic_per_device"
-        type: "per_device"
+        path: "dataset/Exp-2_dynamic"
+        type: "mixed"
         load: no
 
 data-preprocessing:
@@ -24,7 +24,7 @@ model-training:
     # If the method needs a shell script to run the training. Empty if not.
     cmds: ""
     paths:
-      repo: "../reimplementations/devicemein"
+      repo: "../reimplementations/devicemien"
       eval-dir: "./evaluation/devicemein"
       model-dir: "./evaluation/devicemein/{}-models" # Path to where the models are stored.
       device-file: "{}/devices.txt" # Path to the file containing device names and mac addresses (for ground truth)
