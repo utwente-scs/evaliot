@@ -50,7 +50,7 @@ artifact
 Code for the **Main Controller** is in this file.
 
 ### Dataset
-Put the datasets for evaluations in this directory.
+Download the dataset from [Zenodo](https://doi.org/10.5281/zenodo.17078897) and put the unzipped directories for evaluations in this directory.
 
 ### Evaluation
 This is the workspace directory where all the relavant data for the evaluations—such as configs, processed datasets, trained models, and evaluation results—are stored.

@@ -3,7 +3,7 @@
 ## Dataset Setup and Evaluation Method
 
 ### 1. Download datasets  
-Download the following files from [here](https://drive.google.com/drive/folders/1s6kpXD9fSfkK6dnhyxvWnkOOyjOqqbdZ?usp=drive_link):  
+Download the following files from [here](https://doi.org/10.5281/zenodo.17078897):  
 - `Experiment-1.zip`  
 - `Experiment-2.zip`  
 
